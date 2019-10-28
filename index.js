@@ -1,3 +1,5 @@
+// const titleize = require('titleize');
+
 const tutorials = [
   'what does the this keyword mean?',
   'What is the Contutorialuctor OO pattern?',
@@ -12,5 +14,15 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
+  return tutorials.map( line => {
+    let words = line.split(' ')
+    let capitalizedWords =
+      words.map( word => word[0].toUpperCase() + word.slice(1) )
+    let answer = capitalizedWords.join(' ')
+    return answer
+  })
 }
+
+// const titleCased = () => {
+//   return tutorials.map(titleize);
+// }
