@@ -1,3 +1,5 @@
+// import { workerData } from "worker_threads";
+
 const tutorials = [
   'what does the this keyword mean?',
   'What is the Contutorialuctor OO pattern?',
@@ -12,5 +14,16 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
+  return results = tutorials.map(function(sentence){
+    let sentenceArr = sentence.split(" ")
+    let capWord = sentenceArr.map(function(word){
+      return word[0].toUpperCase()+word.slice(1)
+      })
+    
+    return capWord.join(" ")
+  })
 }
+
+
+
+titleCased()
